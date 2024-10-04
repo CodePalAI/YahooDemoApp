@@ -1277,18 +1277,6 @@ public class PhysicsService {
         return fusionEnergy;
     }
 
-    public String simulateQuantumSuperpositionCollapse(double initialState, double measurementProbability, int totalSteps) {
-        StringBuilder collapseData = new StringBuilder();
-        double collapsedState = initialState;
-
-        for (int i = 0; i < totalSteps; i++) {
-            collapsedState *= Math.sqrt(measurementProbability * i);
-            collapseData.append("Step ").append(i).append(": Collapsed State = ").append(collapsedState).append("\n");
-        }
-
-        return collapseData.toString();
-    }
-
     public double simulateParticleWaveDuality(double particleMass, double velocity, double wavelength, int totalSteps) {
         double waveFunction = 0;
 
@@ -1923,16 +1911,6 @@ public class PhysicsService {
         return lensData.toString();
     }
 
-    public double simulateRelativisticMomentumGain(double mass, double velocity, double speedOfLight, int totalSteps) {
-        double momentum = mass * velocity;
-
-        for (int i = 0; i < totalSteps; i++) {
-            momentum += (mass * velocity) / Math.sqrt(1 - Math.pow(velocity / speedOfLight, 2));
-        }
-
-        return momentum;
-    }
-
     public double simulateThermalRadiationEmission(double surfaceArea, double temperature, double emissivity, int totalSteps) {
         double radiation = 0;
 
@@ -2226,16 +2204,6 @@ public class PhysicsService {
         return signalData.toString();
     }
 
-    public double simulateQuantumDecoherenceRate(double initialCoherence, double decoherenceRate, double environmentalInfluence, int totalSteps) {
-        double coherence = initialCoherence;
-
-        for (int i = 0; i < totalSteps; i++) {
-            coherence *= Math.exp(-decoherenceRate * environmentalInfluence * i);
-        }
-
-        return coherence;
-    }
-
     public double simulateQuantumFieldEnergy(double fieldStrength, double vacuumEnergyDensity, double interactionConstant, int totalSteps) {
         double energy = fieldStrength;
 
@@ -2482,16 +2450,6 @@ public class PhysicsService {
         return detectionData.toString();
     }
 
-    public double simulateQuantumWavefunctionCollapse(double initialWavefunction, double collapseRate, double timeStep, int totalSteps) {
-        double wavefunction = initialWavefunction;
-
-        for (int i = 0; i < totalSteps; i++) {
-            wavefunction *= Math.exp(-collapseRate * timeStep * i);
-        }
-
-        return wavefunction;
-    }
-
     public String simulateDarkEnergyFluctuation(double initialEnergyDensity, double fluctuationAmplitude, int totalSteps) {
         StringBuilder fluctuationData = new StringBuilder();
         double energyDensity = initialEnergyDensity;
@@ -2632,18 +2590,6 @@ public class PhysicsService {
         return entropy;
     }
 
-    public String simulateQuantumDecoherence(double initialCoherence, double environmentalNoise, double decoherenceFactor, int totalSteps) {
-        StringBuilder decoherenceData = new StringBuilder();
-        double coherence = initialCoherence;
-
-        for (int i = 0; i < totalSteps; i++) {
-            coherence *= Math.exp(-decoherenceFactor * environmentalNoise * i);
-            decoherenceData.append("Step ").append(i).append(": Coherence = ").append(coherence).append("\n");
-        }
-
-        return decoherenceData.toString();
-    }
-
     public double simulateRelativisticMomentumGain(double mass, double velocity, double speedOfLight, int totalSteps) {
         double momentum = mass * velocity;
 
@@ -2782,16 +2728,6 @@ public class PhysicsService {
         }
 
         return shiftedEnergy;
-    }
-
-    public double simulateGravitationalTimeDilation(double mass, double distance, double velocity, int totalSteps) {
-        double timeDilation = 0;
-
-        for (int i = 0; i < totalSteps; i++) {
-            timeDilation += (2 * 6.67430 * Math.pow(10, -11) * mass) / (distance * velocity * i + 1);
-        }
-
-        return timeDilation;
     }
 
     public String simulatePulsarWindEmission(double pulsarSpinRate, double magneticFieldStrength, double starRadius, int totalSteps) {
@@ -3299,18 +3235,6 @@ public class PhysicsService {
         return energy;
     }
 
-    public String simulatePhotonPolarizationDecay(double initialPolarization, double decayFactor, double photonEnergy, int totalSteps) {
-        StringBuilder polarizationData = new StringBuilder();
-        double polarization = initialPolarization;
-
-        for (int i = 0; i < totalSteps; i++) {
-            polarization *= Math.exp(-decayFactor * photonEnergy * i);
-            polarizationData.append("Step ").append(i).append(": Polarization = ").append(polarization).append("\n");
-        }
-
-        return polarizationData.toString();
-    }
-
     public double simulateAxionFieldGrowth(double initialField, double interactionStrength, double vacuumEnergy, int totalSteps) {
         double field = initialField;
 
@@ -3319,18 +3243,6 @@ public class PhysicsService {
         }
 
         return field;
-    }
-
-    public String simulateNeutrinoOscillationProbability(double initialNeutrinoMass, double distance, double energy, int totalSteps) {
-        StringBuilder oscillationData = new StringBuilder();
-        double oscillationProbability = 0;
-
-        for (int i = 0; i < totalSteps; i++) {
-            oscillationProbability += Math.sin(1.27 * initialNeutrinoMass * distance / energy) * i;
-            oscillationData.append("Step ").append(i).append(": Oscillation Probability = ").append(oscillationProbability).append("\n");
-        }
-
-        return oscillationData.toString();
     }
 
     public double simulateGravitationalCollapsePressure(double coreMass, double coreRadius, double temperature, int totalSteps) {
@@ -3453,4 +3365,370 @@ public class PhysicsService {
         return gravitationalEffect;
     }
 
+    public double simulateQuantumCoherenceDecay(double initialCoherence, double decoherenceRate, int totalSteps) {
+        double coherence = initialCoherence;
+
+        for (int i = 0; i < totalSteps; i++) {
+            coherence *= Math.exp(-decoherenceRate * i);
+        }
+
+        return coherence;
+    }
+
+    public String simulateGravitonWaveDetection(double gravitonMass, double waveFrequency, double detectorSensitivity, int totalSteps) {
+        StringBuilder detectionData = new StringBuilder();
+        double detectionProbability = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            detectionProbability += gravitonMass * waveFrequency * detectorSensitivity / (i + 1);
+            detectionData.append("Step ").append(i).append(": Detection Probability = ").append(detectionProbability).append("\n");
+        }
+
+        return detectionData.toString();
+    }
+
+    public double simulateCosmicNeutrinoFlux(double neutrinoEnergy, double sourceDistance, double mediumDensity, int totalSteps) {
+        double flux = neutrinoEnergy;
+
+        for (int i = 0; i < totalSteps; i++) {
+            flux *= Math.exp(-mediumDensity * sourceDistance * i);
+        }
+
+        return flux;
+    }
+
+    public double simulatePhotonEnergyAbsorption(double photonEnergy, double mediumDensity, double pathLength, int totalSteps) {
+        double absorbedEnergy = photonEnergy;
+
+        for (int i = 0; i < totalSteps; i++) {
+            absorbedEnergy *= Math.exp(-mediumDensity * pathLength * i);
+        }
+
+        return absorbedEnergy;
+    }
+
+    public double simulateAxionDecayRate(double axionMass, double decayConstant, double interactionStrength, int totalSteps) {
+        double decayRate = axionMass;
+
+        for (int i = 0; i < totalSteps; i++) {
+            decayRate *= Math.exp(-decayConstant * interactionStrength * i);
+        }
+
+        return decayRate;
+    }
+
+    public String simulateRelativisticTimeShift(double initialTime, double gravitationalPotential, double velocity, int totalSteps) {
+        StringBuilder timeShiftData = new StringBuilder();
+        double shiftedTime = initialTime;
+
+        for (int i = 0; i < totalSteps; i++) {
+            shiftedTime *= Math.sqrt(1 - (2 * gravitationalPotential / Math.pow(velocity * i + 1, 2)));
+            timeShiftData.append("Step ").append(i).append(": Time Shift = ").append(shiftedTime).append("\n");
+        }
+
+        return timeShiftData.toString();
+    }
+
+    public double simulateNeutrinoMassHierarchy(double neutrinoMass1, double neutrinoMass2, double distance, double energy, int totalSteps) {
+        double massDifference = neutrinoMass1 - neutrinoMass2;
+        double hierarchyFactor = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            hierarchyFactor += Math.sin(1.27 * massDifference * distance / energy) * i;
+        }
+
+        return hierarchyFactor;
+    }
+
+    public double simulatePulsarMagnetosphere(double magneticFieldStrength, double spinRate, double starRadius, int totalSteps) {
+        double magnetosphereRadius = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            magnetosphereRadius += (magneticFieldStrength * Math.pow(starRadius, 3)) / (spinRate * i + 1);
+        }
+
+        return magnetosphereRadius;
+    }
+
+    public String simulateQuarkGluonPlasmaExpansion(double plasmaDensity, double temperature, double expansionRate, int totalSteps) {
+        StringBuilder expansionData = new StringBuilder();
+        double volume = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            volume += plasmaDensity * temperature * Math.pow(expansionRate, 3) * i;
+            expansionData.append("Step ").append(i).append(": Plasma Volume = ").append(volume).append("\n");
+        }
+
+        return expansionData.toString();
+    }
+
+    public double simulateBlackHoleEntropy(double blackHoleMass, double temperature, double eventHorizonRadius, int totalSteps) {
+        double entropy = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            entropy += blackHoleMass * temperature * Math.pow(eventHorizonRadius, 2) * i;
+        }
+
+        return entropy;
+    }
+
+    public double simulateRelativisticEnergyEmission(double restMass, double velocity, double speedOfLight, int totalSteps) {
+        double energyEmission = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            energyEmission += restMass * Math.pow(velocity, 2) / Math.sqrt(1 - Math.pow(velocity / speedOfLight, 2));
+        }
+
+        return energyEmission;
+    }
+
+    public String simulateDarkEnergyDrivenAcceleration(double initialAcceleration, double darkEnergyDensity, double universeExpansionRate, int totalSteps) {
+        StringBuilder accelerationData = new StringBuilder();
+        double acceleration = initialAcceleration;
+
+        for (int i = 0; i < totalSteps; i++) {
+            acceleration += darkEnergyDensity * universeExpansionRate * Math.pow(i, 2);
+            accelerationData.append("Step ").append(i).append(": Acceleration = ").append(acceleration).append("\n");
+        }
+
+        return accelerationData.toString();
+    }
+
+    public double simulatePhotonPolarizationRotation(double polarizationAngle, double photonEnergy, double mediumDensity, int totalSteps) {
+        double polarizationRotation = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            polarizationRotation += photonEnergy * Math.sin(polarizationAngle * i) * Math.exp(-mediumDensity * i);
+        }
+
+        return polarizationRotation;
+    }
+
+    public String simulateRelativisticGravitationalRedshift(double gravitationalPotential, double velocity, double speedOfLight, int totalSteps) {
+        StringBuilder redshiftData = new StringBuilder();
+        double redshift = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            redshift += gravitationalPotential / Math.sqrt(1 - Math.pow(velocity / speedOfLight, 2));
+            redshiftData.append("Step ").append(i).append(": Gravitational Redshift = ").append(redshift).append("\n");
+        }
+
+        return redshiftData.toString();
+    }
+
+    public double simulateThermodynamicFreeEnergy(double temperature, double entropy, double systemEnergy, int totalSteps) {
+        double freeEnergy = systemEnergy;
+
+        for (int i = 0; i < totalSteps; i++) {
+            freeEnergy -= temperature * entropy * i;
+        }
+
+        return freeEnergy;
+    }
+
+    public String simulateElectromagneticPulsePropagation(double pulseStrength, double mediumResistance, double pulseDuration, int totalSteps) {
+        StringBuilder pulseData = new StringBuilder();
+        double pulseEffect = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            pulseEffect = pulseStrength * Math.exp(-mediumResistance * pulseDuration * i);
+            pulseData.append("Step ").append(i).append(": Pulse Effect = ").append(pulseEffect).append("\n");
+        }
+
+        return pulseData.toString();
+    }
+
+    public double simulateBlackHoleJetEmission(double blackHoleMass, double magneticFieldStrength, double accretionDiskDensity, int totalSteps) {
+        double jetEnergy = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            jetEnergy += blackHoleMass * accretionDiskDensity * Math.pow(magneticFieldStrength, 2) * i;
+        }
+
+        return jetEnergy;
+    }
+
+    public double simulateThermodynamicWork(double pressure, double volumeChange, int totalSteps) {
+        double work = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            work += pressure * volumeChange * i;
+        }
+
+        return work;
+    }
+
+    public String simulateNeutrinoDetectorSignal(double neutrinoFlux, double detectorSensitivity, double noiseLevel, int totalSteps) {
+        StringBuilder signalData = new StringBuilder();
+        double signalStrength = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            signalStrength += neutrinoFlux * detectorSensitivity * i - noiseLevel * i;
+            signalData.append("Step ").append(i).append(": Signal Strength = ").append(signalStrength).append("\n");
+        }
+
+        return signalData.toString();
+    }
+
+    public double simulateQuantumWaveFunctionCollapse(double initialWaveFunction, double collapseRate, double interactionConstant, int totalSteps) {
+        double waveFunction = initialWaveFunction;
+
+        for (int i = 0; i < totalSteps; i++) {
+            waveFunction *= Math.exp(-collapseRate * interactionConstant * i);
+        }
+
+        return waveFunction;
+    }
+
+    public double simulateDarkEnergyFieldExpansion(double initialEnergyDensity, double expansionRate, double darkEnergyCoefficient, int totalSteps) {
+        double energyDensity = initialEnergyDensity;
+
+        for (int i = 0; i < totalSteps; i++) {
+            energyDensity *= 1 + expansionRate * darkEnergyCoefficient * i;
+        }
+
+        return energyDensity;
+    }
+
+    public String simulateQuantumTunnelingEffect(double barrierHeight, double particleEnergy, double barrierWidth, int totalSteps) {
+        StringBuilder tunnelingData = new StringBuilder();
+        double tunnelingProbability = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            tunnelingProbability = Math.exp(-2 * barrierHeight * barrierWidth / particleEnergy) * i;
+            tunnelingData.append("Step ").append(i).append(": Tunneling Probability = ").append(tunnelingProbability).append("\n");
+        }
+
+        return tunnelingData.toString();
+    }
+
+    public double simulatePhotonDeflectionByGravity(double photonEnergy, double gravitationalFieldStrength, double deflectionAngle, int totalSteps) {
+        double deflectedEnergy = photonEnergy;
+
+        for (int i = 0; i < totalSteps; i++) {
+            deflectedEnergy *= Math.sin(deflectionAngle * gravitationalFieldStrength * i);
+        }
+
+        return deflectedEnergy;
+    }
+
+    public String simulateQuantumStateTransition(double initialState, double transitionRate, double noiseInfluence, int totalSteps) {
+        StringBuilder transitionData = new StringBuilder();
+        double state = initialState;
+
+        for (int i = 0; i < totalSteps; i++) {
+            state *= Math.exp(-transitionRate * noiseInfluence * i);
+            transitionData.append("Step ").append(i).append(": State = ").append(state).append("\n");
+        }
+
+        return transitionData.toString();
+    }
+
+    public double simulateRelativisticEnergyDecay(double initialEnergy, double velocity, double timeStep, int totalSteps) {
+        double energy = initialEnergy;
+
+        for (int i = 0; i < totalSteps; i++) {
+            energy *= (1 - Math.pow(velocity / timeStep, 2)) * i;
+        }
+
+        return energy;
+    }
+
+    public double simulateAxionFieldInteraction(double fieldStrength, double interactionConstant, double vacuumEnergy, int totalSteps) {
+        double interactionRate = fieldStrength;
+
+        for (int i = 0; i < totalSteps; i++) {
+            interactionRate += interactionConstant * vacuumEnergy * Math.pow(i, 2);
+        }
+
+        return interactionRate;
+    }
+
+    public String simulatePhotonPolarizationChange(double initialPolarization, double rotationRate, double photonEnergy, int totalSteps) {
+        StringBuilder polarizationData = new StringBuilder();
+        double polarization = initialPolarization;
+
+        for (int i = 0; i < totalSteps; i++) {
+            polarization *= Math.sin(rotationRate * photonEnergy * i);
+            polarizationData.append("Step ").append(i).append(": Polarization = ").append(polarization).append("\n");
+        }
+
+        return polarizationData.toString();
+    }
+
+    public double simulateNeutronStarMagneticField(double coreTemperature, double neutronDensity, double magneticFieldStrength, int totalSteps) {
+        double magneticField = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            magneticField += coreTemperature * neutronDensity * magneticFieldStrength * i;
+        }
+
+        return magneticField;
+    }
+
+    public String simulateQuantumEntanglementFluctuation(double initialEntanglement, double fluctuationRate, int totalSteps) {
+        StringBuilder fluctuationData = new StringBuilder();
+        double entanglement = initialEntanglement;
+
+        for (int i = 0; i < totalSteps; i++) {
+            entanglement *= Math.cos(fluctuationRate * i);
+            fluctuationData.append("Step ").append(i).append(": Entanglement = ").append(entanglement).append("\n");
+        }
+
+        return fluctuationData.toString();
+    }
+
+    public double simulateDarkMatterAnnihilationRate(double darkMatterDensity, double interactionCrossSection, double velocity, int totalSteps) {
+        double annihilationRate = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            annihilationRate += darkMatterDensity * interactionCrossSection * velocity * i;
+        }
+
+        return annihilationRate;
+    }
+
+    public String simulateGravitationalLensEffect(double mass, double lightAngle, double distance, int totalSteps) {
+        StringBuilder lensEffectData = new StringBuilder();
+        double lensEffect = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            lensEffect += (mass * lightAngle) / (distance * i + 1);
+            lensEffectData.append("Step ").append(i).append(": Lens Effect = ").append(lensEffect).append("\n");
+        }
+
+        return lensEffectData.toString();
+    }
+
+    public double simulateQuantumFieldStrength(double initialFieldStrength, double fluctuationRate, double interactionConstant, int totalSteps) {
+        double fieldStrength = initialFieldStrength;
+
+        for (int i = 0; i < totalSteps; i++) {
+            fieldStrength += fluctuationRate * interactionConstant * Math.sin(i * Math.PI / 3);
+        }
+
+        return fieldStrength;
+    }
+
+    public String simulateNeutrinoOscillationRate(double neutrinoMassDifference, double energy, double distance, int totalSteps) {
+        StringBuilder oscillationData = new StringBuilder();
+        double oscillationRate = 0;
+
+        for (int i = 0; i < totalSteps; i++) {
+            oscillationRate += Math.sin(1.27 * neutrinoMassDifference * distance / energy) * i;
+            oscillationData.append("Step ").append(i).append(": Oscillation Rate = ").append(oscillationRate).append("\n");
+        }
+
+        return oscillationData.toString();
+    }
+
+    public double simulateRelativisticForceShift(double initialForce, double velocity, double decayRate, int totalSteps) {
+        double force = initialForce;
+
+        for (int i = 0; i < totalSteps; i++) {
+            force *= Math.exp(-decayRate * velocity * i);
+        }
+
+        return force;
+    }
 }
